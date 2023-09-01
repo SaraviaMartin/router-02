@@ -1,4 +1,4 @@
-import {navigate} from '../Link.jsx'
+import {Link} from '../Link.jsx'
 export default function AboutPage() {
 
     return (
@@ -6,7 +6,7 @@ export default function AboutPage() {
         <h1>Router-02-About</h1>
         <p>Este es la seccion acerda de nosotros</p>
         <img src="" alt="" /><br />
-        <button onClick={() => navigate('/')}>Ir a la Home</button>
+        <Link to='/'>Ir a Home</Link>
       </>
     )
   }
