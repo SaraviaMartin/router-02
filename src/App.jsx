@@ -2,7 +2,7 @@
 import HomePage from "./pages/Home"
 import AboutPage from "./pages/About"
 import { Router } from "./Router"
-import Page404 from "./pages/404"
+import SearchPage from "./pages/Search"
 
 const appRoutes = [
   {
@@ -14,8 +14,8 @@ const appRoutes = [
     Component: AboutPage
   },
   {
-    path: '/search',
-    Component: () => <h1>Componente de Busqueda</h1>
+    path: '/search/:query',
+    Component: SearchPage
   }
 ]
 
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <main>
-      <Router routes={appRoutes} defaultComponent={Page404}/>
+      <Router routes={appRoutes}/>
     </main>
   )
 }
